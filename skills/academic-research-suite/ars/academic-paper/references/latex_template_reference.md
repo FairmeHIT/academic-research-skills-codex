@@ -21,7 +21,7 @@ Used by `formatter_agent` for LaTeX output generation.
 \usepackage{url}                      % URL formatting
 \usepackage{float}                    % Figure placement
 
-% === CJK Support (for zh-TW content) ===
+% === CJK Support (for zh-CN content) ===
 % Uncomment for Chinese content:
 % \usepackage{xeCJK}
 % \setCJKmainfont{Noto Sans CJK TC}
@@ -117,7 +117,7 @@ When APA 7.0 format is requested, use the `apa7` document class instead of `arti
 \usepackage{fontspec}
 \setmainfont{Times New Roman}
 \usepackage{xeCJK}
-\setCJKmainfont{Source Han Serif TC VF}
+\setCJKmainfont{Source Han Serif SC VF}
 \setmonofont{Courier New}
 
 % === Additional packages ===
@@ -308,7 +308,7 @@ Where N = `(number_of_columns - 1) × 2`
 
 ## XeLaTeX for Chinese Content
 
-When the paper includes zh-TW content:
+When the paper includes zh-CN content:
 
 ```latex
 \documentclass[12pt, a4paper]{article}

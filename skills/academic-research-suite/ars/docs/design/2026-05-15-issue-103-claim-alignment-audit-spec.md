@@ -741,7 +741,7 @@ Files that may need touch:
 | `shared/contracts/material_passport*` | No root schema exists; aggregate referenced through orchestrator | — |
 | `shared/sprint_contract.schema.json` (Schema 13.1) | **NO TOUCH** (D6 zero-touch) | — |
 | `scripts/check_audit_artifact_consistency.py` | **NO TOUCH** (D5 — separate lint) | — |
-| `README.md` + `README.zh-TW.md` | v3.8 anchor + Zhao 2026 + RubricEM cite | LOW |
+| `README.md` + `README.zh-CN.md` | v3.8 anchor + Zhao 2026 + RubricEM cite | LOW |
 | `CHANGELOG.md` | v3.8 entry | LOW |
 | `MODE_REGISTRY.md` | New mode flag for opt-in audit | LOW |
 

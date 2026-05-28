@@ -250,7 +250,7 @@ L — Link
     -> Use transition words/phrases
 ```
 
-**Paragraph length standard**: Each paragraph 120-200 words (EN) or 200-350 characters (zh-TW)
+**Paragraph length standard**: Each paragraph 120-200 words (EN) or 200-350 characters (zh-CN)
 **Minimum per section**: At least 3 TEEL paragraphs
 **Exceptions**: The first paragraph of Introduction and the last paragraph of Conclusion need not strictly follow TEEL
 

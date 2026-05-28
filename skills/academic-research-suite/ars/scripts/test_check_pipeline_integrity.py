@@ -213,13 +213,13 @@ class CheckPipelineIntegrityTests(unittest.TestCase):
 
     def test_unicode_filenames_with_canonical_stem_match(self) -> None:
         """Filenames with non-ASCII characters but containing the canonical
-        agent stem in ASCII should still match. E.g., devils_advocate_報告.md"""
+        agent stem in ASCII should still match. E.g., devils_advocate_报告.md"""
         with TemporaryDirectory() as td:
             _build_workspace(Path(td), {
                 "phase5_review": [
-                    "devils_advocate_報告.md",
-                    "editor_in_chief_決定.md",
-                    "ethics_review_報告.md",
+                    "devils_advocate_报告.md",
+                    "editor_in_chief_决定.md",
+                    "ethics_review_报告.md",
                 ],
             })
             result = _run(Path(td))

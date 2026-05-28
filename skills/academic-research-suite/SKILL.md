@@ -64,7 +64,7 @@ language or via an `ars-*` alias.
 
 If the user says they want to write a paper, thesis, proposal, article, journal
 article, or manuscript, but they only provide a broad topic, tentative title,
-research interest, or "題目/主題/方向" and do **not** provide a clear,
+research interest, or "题目/主题/方向" and do **not** provide a clear,
 answerable research question, route to `ars/deep-research/WORKFLOW.md` in
 `socratic` mode first. This matches the upstream ARS experience where vague
 paper-topic requests start with SCR/Socratic narrowing instead of immediate
@@ -75,9 +75,9 @@ intent:
 
 - "I want to write a paper on ..."
 - "I have a paper topic/title ..."
-- "我想做一篇論文，題目是..."
-- "我有一個研究方向/主題，但還不確定問題"
-- "幫我想論文題目/收斂研究問題"
+- "我想做一篇论文，题目是..."
+- "我有一个研究方向/主题，但还不确定问题"
+- "帮我想论文题目/收敛研究问题"
 
 First response in this path:
 
@@ -119,7 +119,7 @@ uses the current model unless the user explicitly requests another model.
 | `/ars-full`, `ars-full` | `ars/commands/ars-full.md` | `ars/academic-pipeline/WORKFLOW.md` |
 
 If the request body after the alias is a vague topic, tentative title, research
-direction, or "題目/主題/方向" without a clear research question, defer to the Paper Topic Scoping Override above before routing to the alias's target mode.
+direction, or "题目/主题/方向" without a clear research question, defer to the Paper Topic Scoping Override above before routing to the alias's target mode.
 This applies to `ars-plan`, `ars-outline`, `ars-abstract`, `ars-lit-review`,
 and `ars-full`.
 
@@ -141,7 +141,7 @@ using them in Codex:
 | Claude, Claude Code, model-specific wording | Interpret as "the current Codex agent" unless the text is part of a disclosure template or historical example. |
 | `ARS_CROSS_MODEL`, `ARS_CROSS_MODEL_SAMPLE_INTERVAL` | Treat upstream secondary-model dispatch instructions as no-op unless the user explicitly asks for cross-model review. When explicitly enabled in this Codex package, use Anthropic Claude Opus 4.7 via API (`ARS_CROSS_MODEL=claude-opus-4.7`, `ANTHROPIC_API_KEY`); do not route this reviewer through Codex/OpenAI APIs. Skip unconfigured cross-model report sections instead of inventing results. |
 | `S2_API_KEY`, `OPENALEX_POLITE_EMAIL`, `CROSSREF_POLITE_EMAIL` | These are optional upstream bibliographic lookup settings. Use them only when the user explicitly runs contamination-signal migration or programmatic reference verification; normal Codex routing does not require them. |
-| `fresh Claude Code session`, `Claude Code session` | Read as "a new Codex conversation". Material Passport reset semantics still apply; only the runtime changes. This rule covers `ars/academic-pipeline/WORKFLOW.md`, `ars/academic-pipeline/agents/pipeline_orchestrator_agent.md`, `ars/academic-pipeline/references/passport_as_reset_boundary.md`, `ars/experiment-agent/README.md`, `ars/experiment-agent/README.zh-TW.md`, and `ars/docs/PERFORMANCE.md`. |
+| `fresh Claude Code session`, `Claude Code session` | Read as "a new Codex conversation". Material Passport reset semantics still apply; only the runtime changes. This rule covers `ars/academic-pipeline/WORKFLOW.md`, `ars/academic-pipeline/agents/pipeline_orchestrator_agent.md`, `ars/academic-pipeline/references/passport_as_reset_boundary.md`, `ars/experiment-agent/README.md`, `ars/experiment-agent/README.zh-CN.md`, and `ars/docs/PERFORMANCE.md`. |
 | `/ars-*` slash command, Claude plugin command | Treat `ars/commands/ars-*.md` as optional prompt recipes. Codex does not register slash commands from this package. |
 | SessionStart hook, SubagentStop hook, `hooks/hooks.json` | Treat as upstream Claude Code hook metadata only. Do not install or execute Claude hooks in Codex unless the user explicitly asks to inspect or port a hook. |
 
@@ -241,7 +241,7 @@ when the task needs programmatic reference verification.
 ## Output Defaults
 
 - Default language follows the user's language.
-- For Chinese, use Traditional Chinese unless the user requests otherwise.
+- For Chinese, use Simplified Chinese unless the user requests otherwise.
 - For staged workflows, show the current stage, required inputs, output artifact,
   and whether the next gate is optional or mandatory.
 - For paper/research outputs, keep uncertainty explicit and separate evidence,

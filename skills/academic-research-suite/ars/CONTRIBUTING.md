@@ -20,7 +20,7 @@ These contributions can be merged quickly with minimal review:
 
 - **Typo and formatting fixes** — spelling, broken links, markdown rendering issues
 - **New examples** — pipeline output showcases, worked examples for specific disciplines
-- **Translation improvements** — better zh-TW or EN phrasing in READMEs or agent definitions
+- **Translation improvements** — better zh-CN or EN phrasing in READMEs or agent definitions
 
 ### Requires maintainer review
 
@@ -64,7 +64,7 @@ Either shape is accepted under the same maintainer-facing conditions:
 - **Describe what and why** — explain the motivation, not just the change
 - **Reference issues** — if your PR addresses an open issue, link it
 - **Test your changes** — if you're modifying agent definitions, try running the skill to confirm it works as expected
-- **Keep READMEs in sync** — if your change affects user-facing documentation, update both `README.md` and `README.zh-TW.md`
+- **Keep READMEs in sync** — if your change affects user-facing documentation, update both `README.md` and `README.zh-CN.md`
 
 ---
 

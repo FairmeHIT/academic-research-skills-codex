@@ -85,9 +85,9 @@ def test_check_setup_docs_accepts_codex_overlay_text(
         "PDF output requires `tectonic` and the relevant fonts.\n",
         encoding="utf-8",
     )
-    (root / "docs" / "SETUP.zh-TW.md").write_text(
-        "直接產生 `.docx` 需要 Pandoc。\n"
-        "PDF 輸出需要 `tectonic` 與相關字型。\n",
+    (root / "docs" / "SETUP.zh-CN.md").write_text(
+        "直接产生 `.docx` 需要 Pandoc。\n"
+        "PDF 输出需要 `tectonic` 与相关字体。\n",
         encoding="utf-8",
     )
 

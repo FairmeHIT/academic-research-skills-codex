@@ -191,7 +191,7 @@ curl --proto '=https' --tlsv1.2 -fsSL https://drop-sh.fullyjustified.net | sh
 Recommended fonts for APA 7 CJK output:
 
 - Times New Roman
-- Source Han Serif TC VF / Noto Serif TC
+- Source Han Serif SC VF / Noto Serif SC
 - Courier New
 
 ### Adapter Dependencies

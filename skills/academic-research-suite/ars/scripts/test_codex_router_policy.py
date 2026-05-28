@@ -33,7 +33,7 @@ def test_vague_paper_topic_routes_to_socratic_before_paper_or_pipeline() -> None
 
 def test_router_contains_chinese_paper_topic_triggers() -> None:
     text = _router_text()
-    for trigger in ("我想做一篇論文", "題目", "研究方向", "收斂研究問題"):
+    for trigger in ("我想做一篇论文", "题目", "研究方向", "收敛研究问题"):
         assert trigger in text
 
 

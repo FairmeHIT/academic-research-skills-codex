@@ -588,7 +588,7 @@ Stage 5: academic-paper (format-convert mode)
   - Step 2: Produce MD, then generate DOCX via Pandoc when available (otherwise provide conversion instructions)
   - Step 3: Produce LaTeX (using corresponding document class, e.g., apa7 class for APA 7.0)
   - Step 4: After user confirms content is correct, tectonic compiles PDF (final version)
-  - Fonts: Times New Roman (English) + Source Han Serif TC VF (Chinese) + Courier New (monospace)
+  - Fonts: Times New Roman (English) + Source Han Serif SC VF (Chinese) + Courier New (monospace)
   - ⚠️ IRON RULE: PDF must be compiled from LaTeX (HTML-to-PDF is prohibited)
 ```
 

@@ -20,7 +20,7 @@ All notable changes to this project will be documented in this file.
 
 **Documentation:**
 - `docs/ARCHITECTURE.md` updated from stale v3.8.0 baseline to v3.9.4.1; Section 8 Evolution Timeline filled in v3.8.1 / v3.8.2 / v3.9.0 / v3.9.1 / v3.9.2 / v3.9.3 / v3.9.4 / v3.9.4.1 entries; Section 9 Skill Modes table aligned to current versions.
-- Suite-version needles aligned across MODE_REGISTRY.md, README.md badge + tag URL + section heading, README.zh-TW.md badge + tag URL + section heading, academic-pipeline/SKILL.md frontmatter, `.claude-plugin/plugin.json`, `scripts/check_spec_consistency.py` expected-text constants, `.claude/CLAUDE.md` skill suite table.
+- Suite-version needles aligned across MODE_REGISTRY.md, README.md badge + tag URL + section heading, README.zh-CN.md badge + tag URL + section heading, academic-pipeline/SKILL.md frontmatter, `.claude-plugin/plugin.json`, `scripts/check_spec_consistency.py` expected-text constants, `.claude/CLAUDE.md` skill suite table.
 
 **Test count:** 1549 → **1561** (+12 net new tests covering all 4 fixes, 0 regression).
 
@@ -355,7 +355,7 @@ Adds a third evidence anchor to the `### Why human-in-the-loop, not full automat
 **Modified files:**
 
 - `README.md` — new Zhao et al. paragraph
-- `README.zh-TW.md` — translated equivalent
+- `README.zh-CN.md` — translated equivalent
 
 **Three motivation anchors now read in sequence:**
 
@@ -625,12 +625,12 @@ Meta-lesson from this analysis: "we already do something adjacent" is weaker tha
   resume. Bash 3.2 compatible — runs on macOS stock `/bin/bash` with no
   `brew install bash` requirement. `${CLAUDE_PLUGIN_ROOT}` quoted for
   install paths containing spaces.
-- **`docs/PERFORMANCE.md` + `.zh-TW.md`** subsection
+- **`docs/PERFORMANCE.md` + `.zh-CN.md`** subsection
   "v3.7.0 Plugin agents and model routing" explaining `model: inherit`
   semantics and the current 3-agent scope boundary.
 - **`docs/ARCHITECTURE.md`** Evolution Timeline extended with v3.6.7 / v3.6.8 /
   v3.7.0 entries.
-- **README + README.zh-TW** version badge bumped to v3.7.0; Pipeline section
+- **README + README.zh-CN** version badge bumped to v3.7.0; Pipeline section
   heading bumped to v3.7; CHANGELOG entry added.
 
 ### Deferred (future release)
@@ -944,7 +944,7 @@ Reference: `feedback_codex_review_vs_resume_audit_scope.md`.
   rather than as a recommended flow. The upload UI's expected rejection on
   description-too-long is documented as deliberate, not an oversight to fix
   later.
-- **`docs/SETUP.zh-TW.md`** mirrors the English changes end-to-end.
+- **`docs/SETUP.zh-CN.md`** mirrors the English changes end-to-end.
 
 ### Notes
 
@@ -999,7 +999,7 @@ Reference: `feedback_codex_review_vs_resume_audit_scope.md`.
   `literature_corpus[]` adapters and schema validators) and refreshed the project-capacity
   guidance against current Anthropic Project file limits (per-file 30 MB; file count is
   not artificially capped at 200).
-- **`docs/SETUP.zh-TW.md`** — mirrored the English rewrite end-to-end so Traditional
+- **`docs/SETUP.zh-CN.md`** — mirrored the English rewrite end-to-end so Simplified
   Chinese readers see the same structure and content for Methods 1-4.
 - **`QUICKSTART.md` Step 1** — install commands aligned with the new Method 3 four-symlink
   approach.
@@ -1040,7 +1040,7 @@ Reference: `feedback_codex_review_vs_resume_audit_scope.md`.
   syncs Version Info footer that lagged at 2.9.0).
 - `academic-paper/SKILL.md` 3.1.0 → 3.1.1 — literature_strategist_agent corpus-first flow.
 - `academic-pipeline/SKILL.md` 3.6.4 → 3.6.5 — suite version invariant.
-- `.claude/CLAUDE.md`, `MODE_REGISTRY.md`, `README.md`, `README.zh-TW.md`,
+- `.claude/CLAUDE.md`, `MODE_REGISTRY.md`, `README.md`, `README.zh-CN.md`,
   `scripts/check_spec_consistency.py` updated for the version bump (suite version,
   badge, tag, changelog heading).
 
@@ -1072,7 +1072,7 @@ Reference: `feedback_codex_review_vs_resume_audit_scope.md`.
 - `academic-pipeline/references/passport_as_reset_boundary.md`: "deferred to v3.6.4, PR-B" placeholders replaced with forward references to `adapters/overview.md` and `literature_corpus_entry.schema.json`.
 - `shared/handoff_schemas.md`: Schema 9 optional fields table adds `literature_corpus`; new "Literature Corpus Input Port (v3.6.4)" subsection appended after Reset Boundary Extension.
 - `academic-pipeline/SKILL.md` bumped 3.6.3 → 3.6.4 (suite version invariant). Other skills retain independent semver.
-- `.claude/CLAUDE.md`, `MODE_REGISTRY.md`, `README.md`, `README.zh-TW.md`, `scripts/check_spec_consistency.py` updated for the version bump (suite version, badge, tag, changelog heading).
+- `.claude/CLAUDE.md`, `MODE_REGISTRY.md`, `README.md`, `README.zh-CN.md`, `scripts/check_spec_consistency.py` updated for the version bump (suite version, badge, tag, changelog heading).
 
 ### Not changed (explicit non-goals)
 
@@ -1087,7 +1087,7 @@ Reference: `feedback_codex_review_vs_resume_audit_scope.md`.
 - **Schema 9 `reset_boundary[]`** optional append-only field with two entry kinds (`boundary`, `resume`). Entry shape in `shared/contracts/passport/reset_ledger_entry.schema.json` (oneOf split with `kind` discriminator). Hash computed via JSON Canonical Form + SHA-256 with `"000000000000"` placeholder for self-reference safety. Optional `pending_decision` field handles MANDATORY branch choices (Stage 3 reject/restructure/abort, Stage 5 finalization) that survive the reset boundary.
 - **Protocol doc:** `academic-pipeline/references/passport_as_reset_boundary.md` (authoritative; every file mentioning `ARS_PASSPORT_RESET` must co-locate a reference).
 - **CI lint:** `scripts/check_passport_reset_contract.py` + unittest suite. Wired into `.github/workflows/spec-consistency.yml`.
-- **`docs/PERFORMANCE.md` + `docs/PERFORMANCE.zh-TW.md`** long-running-session subsection documenting when reset beats continuation, passport file-location convention, and empirical-measurement disclaimer.
+- **`docs/PERFORMANCE.md` + `docs/PERFORMANCE.zh-CN.md`** long-running-session subsection documenting when reset beats continuation, passport file-location convention, and empirical-measurement disclaimer.
 
 ### Changed
 - `academic-pipeline/agents/pipeline_orchestrator_agent.md` adds §"Passport Reset Boundary (v3.6.3+)" and §"Resume Mode: `resume_from_passport`". FULL Checkpoint Template includes conditional reset-handoff tag slot.
@@ -1160,7 +1160,7 @@ Reference: `feedback_codex_review_vs_resume_audit_scope.md`.
 - `academic-pipeline/agents/pipeline_orchestrator_agent.md` — checkpoint Steps flow amended: after `state_tracker` update the orchestrator invokes `collaboration_depth_agent` on the just-completed stage's dialogue range (FULL/SLIM only; MANDATORY integrity gates explicitly skip) and injects its output into checkpoint templates as a named "Collaboration Depth" section. FULL checkpoint template expanded with the observer block; SLIM template gains a one-line compact observer summary; MANDATORY template unchanged (integrity gates never dilute). New "Collaboration Depth Observer" subsection under §3 Checkpoint Management covers invocation, cross-model behaviour, short-stage guard, and non-blocking IRON RULE.
 - `academic-pipeline/agents/state_tracker_agent.md` — Write Access Control adds `collaboration_depth_agent` (append-only `collaboration_depth_history[]`). New `dialogue_log_ref` turn-range pointer per stage; new `collaboration_depth_history[]` root-level array; new `append_observer_report()` function (only function that writes the history; preconditions block any attempt to turn observer output into a blocking condition).
 - `scripts/_skill_lint.py` — new shared `split_frontmatter(text) -> (dict|None, str)` lenient helper, reused by the new lint.
-- Suite version bumped to `3.5.0` across `README.md`, `README.zh-TW.md`, `MODE_REGISTRY.md`, `.claude/CLAUDE.md`; new `### v3.5.0 (2026-04-21)` section in both READMEs; new `## v3.5 Key Additions` block in `.claude/CLAUDE.md`.
+- Suite version bumped to `3.5.0` across `README.md`, `README.zh-CN.md`, `MODE_REGISTRY.md`, `.claude/CLAUDE.md`; new `### v3.5.0 (2026-04-21)` section in both READMEs; new `## v3.5 Key Additions` block in `.claude/CLAUDE.md`.
 - `scripts/check_spec_consistency.py` — README version expectations bumped to `v3.5.0`; `MODE_REGISTRY.md` last-updated expectation updated; `.claude/CLAUDE.md` suite version expectation updated. New embedded-changelog regression checks for `### v3.5.0 (2026-04-21)` entries.
 
 ### Notes
@@ -1183,7 +1183,7 @@ Reference: `feedback_codex_review_vs_resume_audit_scope.md`.
 - `scripts/validate_compliance_fixtures.py` + tests — YAML→JSON fixture loop used by CI.
 - `scripts/check_prisma_trAIce_freshness.py` + tests — non-blocking upstream-drift warning (180-day threshold).
 - `.github/workflows/freshness-check.yml` — weekly cron (Monday 09:00 UTC) + path-filtered push trigger for freshness check.
-- `docs/PERFORMANCE.md` + `.zh-TW.md`: new "Long-running session management" section + v3.4.0 token-cost deltas.
+- `docs/PERFORMANCE.md` + `.zh-CN.md`: new "Long-running session management" section + v3.4.0 token-cost deltas.
 
 ### Changed
 
@@ -1193,7 +1193,7 @@ Reference: `feedback_codex_review_vs_resume_audit_scope.md`.
 - `academic-paper/SKILL.md` (v3.0.2 → v3.1.0): `full` mode adds pre-finalize RAISE principles-only check (warn-only). `disclosure` mode unchanged and complementary.
 - `.github/workflows/spec-consistency.yml`: added compliance validator + unit test runner steps.
 - `scripts/check_spec_consistency.py`: version pins bumped.
-- `README.md`, `README.zh-TW.md`, `.claude/CLAUDE.md`, `MODE_REGISTRY.md`: suite version → 3.4.0.
+- `README.md`, `README.zh-CN.md`, `.claude/CLAUDE.md`, `MODE_REGISTRY.md`: suite version → 3.4.0.
 
 ### Notes
 
@@ -1206,13 +1206,13 @@ Reference: `feedback_codex_review_vs_resume_audit_scope.md`.
 
 ### Added
 - `docs/ARCHITECTURE.md` — single source of truth for pipeline structure (flow, stage × dimension matrix, data-access flow, skill dependency graph, quality gates, modes). Merged into main via PR #18.
-- `docs/SETUP.md` + `docs/SETUP.zh-TW.md` — prerequisites, API keys, Pandoc / tectonic setup, cross-model verification (`ARS_CROSS_MODEL`), and four installation methods.
-- `docs/PERFORMANCE.md` + `docs/PERFORMANCE.zh-TW.md` — per-mode token budgets, full-pipeline cost estimate, and recommended Claude Code settings (Agent Team, Ralph Loop, Skip Permissions).
+- `docs/SETUP.md` + `docs/SETUP.zh-CN.md` — prerequisites, API keys, Pandoc / tectonic setup, cross-model verification (`ARS_CROSS_MODEL`), and four installation methods.
+- `docs/PERFORMANCE.md` + `docs/PERFORMANCE.zh-CN.md` — per-mode token budgets, full-pipeline cost estimate, and recommended Claude Code settings (Agent Team, Ralph Loop, Skip Permissions).
 
 ### Changed
-- `README.md` and `README.zh-TW.md` streamlined: removed the ASCII pipeline diagram and the 16-point key-feature list (superseded by `docs/ARCHITECTURE.md`). Setup, performance, and installation sections relocated to `docs/`. Skill Details now anchors version numbers and routes readers to ARCHITECTURE.md §3 for per-agent rosters.
-- `scripts/check_spec_consistency.py` — bumped README version expectations to `v3.3.6`; DOCX contract expectations (both EN and zh-TW) moved from READMEs to the new `docs/SETUP.*` docs; added `check_setup_docs()` step.
-- Suite version bumped to `3.3.6` across `README.md`, `README.zh-TW.md`, `.claude/CLAUDE.md`, and `MODE_REGISTRY.md`.
+- `README.md` and `README.zh-CN.md` streamlined: removed the ASCII pipeline diagram and the 16-point key-feature list (superseded by `docs/ARCHITECTURE.md`). Setup, performance, and installation sections relocated to `docs/`. Skill Details now anchors version numbers and routes readers to ARCHITECTURE.md §3 for per-agent rosters.
+- `scripts/check_spec_consistency.py` — bumped README version expectations to `v3.3.6`; DOCX contract expectations (both EN and zh-CN) moved from READMEs to the new `docs/SETUP.*` docs; added `check_setup_docs()` step.
+- Suite version bumped to `3.3.6` across `README.md`, `README.zh-CN.md`, `.claude/CLAUDE.md`, and `MODE_REGISTRY.md`.
 
 ### Notes
 - No functional change to any skill. Pure documentation reorganization.
@@ -1237,7 +1237,7 @@ Reference: `feedback_codex_review_vs_resume_audit_scope.md`.
 ## [3.3.4] - 2026-04-15
 
 ### Fixed
-- Embedded changelog sections in `README.md` and `README.zh-TW.md` now include the missing `v3.3.3` and `v3.3.2` summaries, so the README history matches the published releases.
+- Embedded changelog sections in `README.md` and `README.zh-CN.md` now include the missing `v3.3.3` and `v3.3.2` summaries, so the README history matches the published releases.
 - `scripts/check_spec_consistency.py` now verifies that the README changelog summaries include the latest release entries, so future drift fails CI.
 
 ### Changed
@@ -1248,7 +1248,7 @@ Reference: `feedback_codex_review_vs_resume_audit_scope.md`.
 ### Fixed
 - `scripts/_skill_lint.py` now rejects SKILL frontmatter that is missing a closing `---` fence instead of silently treating the rest of the file as YAML.
 - `scripts/_skill_lint.py` now reports a readable error when frontmatter parses as valid YAML but not as a mapping object, instead of crashing with `AttributeError`.
-- Broken showcase link for the post-publication audit report corrected in both `README.md` and `README.zh-TW.md`.
+- Broken showcase link for the post-publication audit report corrected in both `README.md` and `README.zh-CN.md`.
 - `scripts/check_spec_consistency.py` now validates README relative Markdown links so future dead links fail CI.
 
 ### Changed
@@ -1273,12 +1273,12 @@ Reference: `feedback_codex_review_vs_resume_audit_scope.md`.
 
 ### Changed
 - Per-skill `metadata.version` patch-bumped on all 4 SKILL.md files; `last_updated` refreshed to 2026-04-15.
-- Suite version bumped to 3.3.2 across `README.md`, `README.zh-TW.md`, and `.claude/CLAUDE.md`.
+- Suite version bumped to 3.3.2 across `README.md`, `README.zh-CN.md`, and `.claude/CLAUDE.md`.
 
 ## [3.3.1] - 2026-04-14
 
 ### Fixed
-- Public contract drift across `README.md`, `README.zh-TW.md`, `.claude/CLAUDE.md`, `MODE_REGISTRY.md`, and the affected `SKILL.md` files
+- Public contract drift across `README.md`, `README.zh-CN.md`, `.claude/CLAUDE.md`, `MODE_REGISTRY.md`, and the affected `SKILL.md` files
 - Cross-model wording now matches the implemented scope: integrity sample verification and independent DA critique are shipped; sixth-reviewer peer review remains planned
 - `academic-pipeline` checkpoint docs now state that SLIM checkpoints still wait for explicit user confirmation
 - `academic-pipeline` integrity gate docs now consistently state that Stage 2.5 and Stage 4.5 cannot be skipped
@@ -1324,7 +1324,7 @@ Integrates insights from Lu et al. (2026, *Nature* 651:914-919) — the first en
 - **Fidelity-Originality Mode Spectrum** (all skills): classifies all modes on a fidelity–originality axis per Lu 2026 Fig 1c. Quick Mode Selection Guides updated with Spectrum column.
   - New file: `shared/mode_spectrum.md`
 - **Early-Stopping Criterion** (academic-pipeline v3.1): convergence check (delta < 3 points + no P0) suggests stopping revision loop. Budget transparency estimate at pipeline start.
-- **README Positioning Update**: "Why human-in-the-loop, not full automation?" section citing Lu 2026 as external evidence for ARS's design thesis. Both EN and zh-TW updated.
+- **README Positioning Update**: "Why human-in-the-loop, not full automation?" section citing Lu 2026 as external evidence for ARS's design thesis. Both EN and zh-CN updated.
 
 ### Changed
 - `.claude/CLAUDE.md`: synced all skill versions and mode lists to reality (deep-research v2.7, academic-paper v2.9, academic-paper-reviewer v1.8, academic-pipeline v3.1)
@@ -1352,7 +1352,7 @@ Integrates insights from Lu et al. (2026, *Nature* 651:914-919) — the first en
 - **Style Calibration** — learn the author's writing voice from past papers (optional, intake Step 10)
 - **Writing Quality Check** — checklist catching overused AI-typical patterns (renamed from AI Writing Lint)
 - Information Systems Basket of 8 journals added to academic-paper reference list
-- Copilot philosophy tagline to README EN + zh-TW
+- Copilot philosophy tagline to README EN + zh-CN
 - Substack guide articles to both READMEs
 
 ### Fixed
@@ -1376,13 +1376,13 @@ Integrates insights from Lu et al. (2026, *Nature* 651:914-919) — the first en
 ## [2.7.3] - 2026-03-10
 
 ### Fixed
-- Version badge corrected in both EN and zh-TW READMEs
+- Version badge corrected in both EN and zh-CN READMEs
 
 ## [2.7.2] - 2026-03-10
 
 ### Added
 - Version, license, and sponsor badges to README
-- zh-TW README badges
+- zh-CN README badges
 
 ## [2.7.1] - 2026-03-10
 

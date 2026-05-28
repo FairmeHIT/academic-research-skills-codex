@@ -255,7 +255,7 @@ def check_readme_sections() -> None:
 
 
 def check_readme_zh_sections() -> None:
-    rel_path = "README.zh-TW.md"
+    rel_path = "README.zh-CN.md"
     text = read(rel_path)
 
     expect_contains(rel_path, "version-v3.9.4.1-blue")
@@ -281,9 +281,9 @@ def check_readme_zh_sections() -> None:
     expect_contains(rel_path, "### v3.3.3 (2026-04-15)")
     expect_contains(rel_path, "### v3.3.2 (2026-04-15)")
     for heading in (
-        "#### Deep Research（深度研究，7 種模式）",
-        "#### Academic Paper（學術論文撰寫，10 種模式）",
-        "#### Academic Paper Reviewer（論文審查，6 種模式）",
+        "#### Deep Research（深度研究，7 种模式）",
+        "#### Academic Paper（学术论文撰写，10 种模式）",
+        "#### Academic Paper Reviewer（论文审查，6 种模式）",
         "### Deep Research (v2.8)",
         "### Academic Paper (v3.0)",
         "### Academic Paper Reviewer (v1.8)",
@@ -294,8 +294,8 @@ def check_readme_zh_sections() -> None:
 
     paper_usage = extract_section(
         text,
-        "#### Academic Paper（學術論文撰寫，10 種模式）",
-        "#### Academic Paper Reviewer（論文審查，6 種模式）",
+        "#### Academic Paper（学术论文撰写，10 种模式）",
+        "#### Academic Paper Reviewer（论文审查，6 种模式）",
     )
     for expected in ("outline-only mode", "abstract-only mode", "disclosure mode"):
         if expected not in paper_usage:
@@ -306,8 +306,8 @@ def check_readme_zh_sections() -> None:
 
     deep_usage = extract_section(
         text,
-        "#### Deep Research（深度研究，7 種模式）",
-        "#### Academic Paper（學術論文撰寫，10 種模式）",
+        "#### Deep Research（深度研究，7 种模式）",
+        "#### Academic Paper（学术论文撰写，10 种模式）",
     )
     if "review mode" not in deep_usage:
         fail(f"{rel_path}: Deep Research usage section missing 'review mode'")
@@ -316,8 +316,8 @@ def check_readme_zh_sections() -> None:
 
     reviewer_usage = extract_section(
         text,
-        "#### Academic Paper Reviewer（論文審查，6 種模式）",
-        "#### Academic Pipeline（全流程調度器）",
+        "#### Academic Paper Reviewer（论文审查，6 种模式）",
+        "#### Academic Pipeline（全流程调度器）",
     )
     if "calibration mode" not in reviewer_usage:
         fail(f"{rel_path}: reviewer usage section missing 'calibration mode'")
@@ -327,8 +327,8 @@ def check_readme_zh_sections() -> None:
         "Peer review gains 6th independent reviewer",
     ):
         expect_absent(rel_path, forbidden)
-    # DOCX contract lines moved to docs/SETUP.zh-TW.md in v3.3.6; checked there instead.
-    expect_contains(rel_path, "DOCX（Pandoc 可用時）")
+    # DOCX contract lines moved to docs/SETUP.zh-CN.md in v3.3.6; checked there instead.
+    expect_contains(rel_path, "DOCX（Pandoc 可用时）")
     check_relative_markdown_links(rel_path)
 
 
@@ -339,10 +339,10 @@ def check_setup_docs() -> None:
             "docs/SETUP.md",
             "PDF output requires `tectonic` and the relevant fonts.",
         )
-        expect_contains("docs/SETUP.zh-TW.md", "直接產生 `.docx` 需要 Pandoc。")
+        expect_contains("docs/SETUP.zh-CN.md", "直接产生 `.docx` 需要 Pandoc。")
         expect_contains(
-            "docs/SETUP.zh-TW.md",
-            "PDF 輸出需要 `tectonic` 與相關字型。",
+            "docs/SETUP.zh-CN.md",
+            "PDF 输出需要 `tectonic` 与相关字体。",
         )
     else:
         expect_contains("docs/SETUP.md", "Direct `.docx` generation uses [Pandoc]")
@@ -350,13 +350,13 @@ def check_setup_docs() -> None:
             "docs/SETUP.md",
             "Direct `.docx` generation requires Pandoc, and PDF generation requires `tectonic`",
         )
-        expect_contains("docs/SETUP.zh-TW.md", "若要直接產出 `.docx`，需要安裝 [Pandoc]")
+        expect_contains("docs/SETUP.zh-CN.md", "若要直接产出 `.docx`，需要安装 [Pandoc]")
         expect_contains(
-            "docs/SETUP.zh-TW.md",
-            "直接產出 `.docx` 需要 Pandoc，PDF 需要 `tectonic`",
+            "docs/SETUP.zh-CN.md",
+            "直接产出 `.docx` 需要 Pandoc，PDF 需要 `tectonic`",
         )
     check_relative_markdown_links("docs/SETUP.md")
-    check_relative_markdown_links("docs/SETUP.zh-TW.md")
+    check_relative_markdown_links("docs/SETUP.zh-CN.md")
 
 
 def check_docx_contract() -> None:

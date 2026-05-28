@@ -66,7 +66,7 @@ From the Paper Configuration Record, extract:
 |-----------|---------|---------|
 | Publication type | Peer-reviewed journals, books, conference proceedings | Blog posts, news articles (unless as primary data) |
 | Date range | Last 10 years (default) + seminal works | Outdated unless historically relevant |
-| Language | Per config (EN, zh-TW, or both) | Other languages unless key source |
+| Language | Per config (EN, zh-CN, or both) | Other languages unless key source |
 | Relevance | Directly addresses RQ | Tangentially related |
 
 ## Source Screening Protocol

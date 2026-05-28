@@ -1,6 +1,6 @@
 ---
 name: academic-paper
-description: "12-agent academic paper writing pipeline. 10 modes (full/plan/outline/revision/revision-coach/abstract/lit-review/format-convert/citation-check/disclosure). 6 paper types, 5 citation formats, bilingual abstracts, LaTeX/DOCX-via-Pandoc/PDF output. Style Calibration + Writing Quality Check + Anti-Patterns with IRON RULE markers. Triggers: write paper, academic paper, guide my paper, parse reviews, AI disclosure, 寫論文, 學術論文, 引導我寫論文, 審查意見."
+description: "12-agent academic paper writing pipeline. 10 modes (full/plan/outline/revision/revision-coach/abstract/lit-review/format-convert/citation-check/disclosure). 6 paper types, 5 citation formats, bilingual abstracts, LaTeX/DOCX-via-Pandoc/PDF output. Style Calibration + Writing Quality Check + Anti-Patterns with IRON RULE markers. Triggers: write paper, academic paper, guide my paper, parse reviews, AI disclosure, 写论文, 学术论文, 引导我写论文, 审查意见."
 metadata:
   version: "3.1.2"
   last_updated: "2026-05-18"
@@ -52,7 +52,7 @@ Write a paper on the impact of declining birth rates on private university manag
 
 **English**: write paper, academic paper, paper outline, write abstract, revise paper, literature review paper, check citations, convert to LaTeX, convert format, format paper, conference paper, journal article, thesis chapter, research paper, guide my paper, help me plan my paper, step by step paper, draft manuscript, write methodology, write discussion, parse reviews, revision roadmap, help me with my revision, I got reviewer comments, convert citations
 
-**繁體中文**: 寫論文, 學術論文, 論文大綱, 寫摘要, 修改論文, 文獻回顧論文, 檢查引用, 轉 LaTeX, 轉換格式, 研討會論文, 期刊文章, 學位論文, 研究論文, 引導我寫論文, 幫我規劃論文, 逐步寫論文, 寫方法論, 寫討論, 審查意見, 修訂路線圖, 幫我修改, 我收到審查意見, 轉換引用格式
+**简体中文**: 写论文, 学术论文, 论文大纲, 写摘要, 修改论文, 文献回顾论文, 检查引用, 转 LaTeX, 转换格式, 研讨会论文, 期刊文章, 学位论文, 研究论文, 引导我写论文, 帮我规划论文, 逐步写论文, 写方法论, 写讨论, 审查意见, 修订路线图, 帮我修改, 我收到审查意见, 转换引用格式
 
 ### Plan Mode Activation
 
@@ -75,7 +75,7 @@ Activate `plan` mode when the user wants guidance, step-by-step planning, or exp
 | Primary output | Publishable paper draft | Research report |
 | Structure | Journal-ready (IMRaD, etc.) | APA 7.0 report |
 | Citation | Multi-format (APA/Chicago/MLA/IEEE/Vancouver) | APA 7.0 only |
-| Abstract | Bilingual (zh-TW + EN) | Single language |
+| Abstract | Bilingual (zh-CN + EN) | Single language |
 | Peer review | Simulated 5-dimension review | Editorial review |
 | Output format | LaTeX/DOCX (via Pandoc)/PDF/Markdown | Markdown only |
 | Revision loop | Max 2 rounds with targeted feedback | Max 2 rounds |
@@ -92,7 +92,7 @@ Activate `plan` mode when the user wants guidance, step-by-step planning, or exp
 | 4 | `argument_builder_agent` | Argument construction, claim-evidence chains, logical flow, counter-argument handling; Plan mode argument stress test | Phase 3 / Plan Step 3 |
 | 5 | `draft_writer_agent` | Section-by-section full draft writing, discipline register adjustment, word count tracking | Phase 4 |
 | 6 | `citation_compliance_agent` | Citation format verification, reference list completeness, DOI checking | Phase 5a |
-| 7 | `abstract_bilingual_agent` | Bilingual abstract (zh-TW + EN), 5-7 keywords each | Phase 5b |
+| 7 | `abstract_bilingual_agent` | Bilingual abstract (zh-CN + EN), 5-7 keywords each | Phase 5b |
 | 8 | `peer_reviewer_agent` | Simulated double-blind review, five-dimension scoring, revision suggestions (max 2 rounds) | Phase 6 |
 | 9 | `formatter_agent` | Convert to LaTeX/DOCX (via Pandoc)/PDF/Markdown, journal formatting, cover letter, citation format conversion (APA 7 / Chicago / MLA / IEEE / Vancouver) | Phase 7 |
 | 10 | `socratic_mentor_agent` | Plan mode Socratic mentor: chapter-by-chapter guidance, convergence criteria (4 signals), question taxonomy (4 types), INSIGHT extraction | Plan Step 0-3 |
@@ -391,10 +391,10 @@ Explicit prohibitions to prevent common failure modes:
 5. **Word count compliance** — within +/-10% of target
 
 ### Bilingual Abstract Quality
-6. **Independent writing** — zh-TW and EN abstracts are independently composed, NOT mechanical translations
+6. **Independent writing** — zh-CN and EN abstracts are independently composed, NOT mechanical translations
 7. **Structural alignment** — both abstracts cover the same key points in the same order
 8. **Keywords** — 5-7 per language, reflecting the paper's core concepts
-9. **Word count** — EN: 150-300 words; zh-TW: 300-500 characters
+9. **Word count** — EN: 150-300 words; zh-CN: 300-500 characters
 
 ### Citation Quality
 10. **Format compliance** — 100% adherence to selected citation style

@@ -8,6 +8,11 @@ Codex-native packaging of the Academic Research Skills suite. This is the
 sibling Codex distribution of
 [Academic Research Skills for Claude Code](https://github.com/Imbad0202/academic-research-skills).
 
+This fork adds a Simplified Chinese adaptation for Codex users: Chinese output
+defaults to Simplified Chinese, user-facing Chinese documentation is published
+as `zh-CN`, ARS trigger keywords include Simplified Chinese wording, and CJK
+LaTeX guidance uses Simplified Chinese font defaults.
+
 This repository vendors the ARS workflow content as a single Codex skill:
 
 ```text
@@ -66,7 +71,7 @@ credentialed GitHub access both work consistently:
 
 ```bash
 python "$HOME/.codex/skills/.system/skill-installer/scripts/install-skill-from-github.py" \
-  --repo Imbad0202/academic-research-skills-codex \
+  --repo FairmeHIT/academic-research-skills-codex \
   --ref main \
   --path skills/academic-research-suite \
   --method git
@@ -77,7 +82,7 @@ To update an existing install:
 ```bash
 rm -rf "$HOME/.codex/skills/academic-research-suite"
 python "$HOME/.codex/skills/.system/skill-installer/scripts/install-skill-from-github.py" \
-  --repo Imbad0202/academic-research-skills-codex \
+  --repo FairmeHIT/academic-research-skills-codex \
   --ref main \
   --path skills/academic-research-suite \
   --method git

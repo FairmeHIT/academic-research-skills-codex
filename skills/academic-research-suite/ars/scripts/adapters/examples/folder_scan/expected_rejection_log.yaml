@@ -11,8 +11,8 @@ rejected:
   source: paper1.pdf
 - missing_fields:
   - authors
-  raw: 中文檔名_2024.pdf
+  raw: 中文档名_2024.pdf
   reason: authors_unparseable
-  source: 中文檔名_2024.pdf
+  source: 中文档名_2024.pdf
 summary:
   total_rejected: 2

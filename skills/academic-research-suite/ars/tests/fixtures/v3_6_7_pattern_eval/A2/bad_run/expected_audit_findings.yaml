@@ -14,7 +14,7 @@ findings:
     line: 7
     description: >
       Pending-source assumed as fact (A2): Smith and Lee (2024) is flagged
-      "待人工查證" (pending manual verification) in the bibliography — annotation
+      "待人工查证" (pending manual verification) in the bibliography — annotation
       is inferred from a publisher landing page abstract, not the retrieved source.
       The deliverable treats the 18-month clustering claim as an established empirical
       finding, citing Smith & Lee (2024) declaratively in both Section 3.1 and 3.2

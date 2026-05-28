@@ -8,7 +8,7 @@
 ```
 1. Ask user language preference:
    "Which language version of the process record would you like to generate first?"
-   - Chinese (Traditional Chinese)
+   - Chinese (Simplified Chinese)
    - English
    - Both (default: generate the user's primary conversation language first)
 
@@ -27,7 +27,7 @@
    - pandoc MD -> LaTeX body
    - Package complete LaTeX document (with cover page, table of contents, headers/footers)
    - tectonic compile PDF
-   - Chinese version requires xeCJK + Source Han Serif TC VF
+   - Chinese version requires xeCJK + Source Han Serif SC VF
 ```
 
 ## Required Content in Process Record
@@ -170,7 +170,7 @@ For dimensions with no findings, state the null result in one sentence. Expand o
 
 - **Filename**: `paper_creation_process.md` (Chinese) / `paper_creation_process_en.md` (English)
 - **PDF**: `paper_creation_process_zh.pdf` / `paper_creation_process_en.pdf`
-- **LaTeX template**: `article` class, 12pt, A4, Times New Roman + Source Han Serif TC VF
+- **LaTeX template**: `article` class, 12pt, A4, Times New Roman + Source Han Serif SC VF
 - **Includes table of contents**: `\tableofcontents`
 - **Header**: left = document title (italic), right = date
 - **Compilation**: tectonic (same toolchain as Stage 5)

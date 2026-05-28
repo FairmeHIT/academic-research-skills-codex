@@ -5,7 +5,7 @@
 **User type**: Master's student in Education, first time writing an academic paper
 **Topic**: The impact of declining birthrate on enrollment strategies of private universities in Taiwan
 **Goal**: Complete a submission-ready IMRaD paper
-**Language**: Traditional Chinese (bilingual abstract)
+**Language**: Simplified Chinese (bilingual abstract)
 
 ---
 

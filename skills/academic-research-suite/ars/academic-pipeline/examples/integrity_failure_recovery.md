@@ -33,7 +33,7 @@ Metrics:
 
 Deliverables:
 - Paper Draft (7,200 words, IMRaD)
-- Bilingual Abstract (EN 248 words + zh-TW 380 characters)
+- Bilingual Abstract (EN 248 words + zh-CN 380 characters)
 - Reference List (45 entries, APA 7.0)
 
 Flagged: None

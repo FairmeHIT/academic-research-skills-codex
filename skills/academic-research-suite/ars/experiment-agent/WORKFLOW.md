@@ -1,6 +1,6 @@
 ---
 name: experiment-agent
-description: "Experiment executor and monitor for academic research. 2-agent system covering code experiments (ML training, statistical analysis, ETL, simulation) and human studies (surveys, field studies, interviews). 4 modes: run (execute + monitor code), manage (track human studies), validate (statistical interpretation + reproducibility verification), plan (Socratic experiment design). Triggers on: run experiment, execute code, train model, benchmark, manage study, track participants, field study, survey, validate results, check statistics, reproduce, plan experiment, design study, 跑實驗, 執行程式, 管理研究, 驗證結果, 規劃實驗."
+description: "Experiment executor and monitor for academic research. 2-agent system covering code experiments (ML training, statistical analysis, ETL, simulation) and human studies (surveys, field studies, interviews). 4 modes: run (execute + monitor code), manage (track human studies), validate (statistical interpretation + reproducibility verification), plan (Socratic experiment design). Triggers on: run experiment, execute code, train model, benchmark, manage study, track participants, field study, survey, validate results, check statistics, reproduce, plan experiment, design study, 跑实验, 执行程式, 管理研究, 验证结果, 规划实验."
 metadata:
   version: "1.0"
   last_updated: "2026-04-14"
@@ -50,7 +50,7 @@ Help me design an experiment to test whether AI tools improve QA officer product
 
 **English**: run experiment, execute code, train model, benchmark, analyze data, manage study, track participants, field study, survey, validate results, check statistics, reproduce, re-run, plan experiment, design study, what should I test
 
-**Chinese**: 跑實驗, 執行程式, 訓練模型, 基準測試, 分析資料, 管理研究, 追蹤參與者, 田野研究, 問卷, 驗證結果, 檢查統計, 重現, 規劃實驗, 設計研究
+**Chinese**: 跑实验, 执行程式, 训练模型, 基准测试, 分析资料, 管理研究, 追踪参与者, 田野研究, 问卷, 验证结果, 检查统计, 重现, 规划实验, 设计研究
 
 ---
 
