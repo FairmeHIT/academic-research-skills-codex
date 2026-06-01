@@ -100,7 +100,7 @@ The strongest regression signals are at stage transitions:
 # Requires: codex CLI installed and authenticated; $academic-research-suite skill installed.
 # Each stage is independent; can re-run any single stage to check that workflow.
 
-cd /path/to/academic-research-skills-codex
+cd /path/to/academic-research-skills-codex-zh-CH
 
 # Stage 1 router check (no RQ yet → must route to deep-research socratic)
 codex exec --ephemeral --sandbox read-only -c model_reasoning_effort=low \

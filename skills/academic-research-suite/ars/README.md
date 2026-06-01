@@ -2,7 +2,7 @@
 
 > **Codex package note.** This file is the vendored upstream ARS README and
 > still describes the native Claude Code plugin. In
-> `academic-research-skills-codex`, install and use the outer Codex skill
+> `academic-research-skills-codex-zh-CH`, install and use the outer Codex skill
 > instead: see [`../../../README.md`](../../../README.md),
 > [`docs/SETUP.md`](docs/SETUP.md), and
 > [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md). Claude-only features such as
@@ -70,7 +70,7 @@ The architecture doc supersedes the sprawling pipeline description that used to 
 
 **👉 [docs/SETUP.md](docs/SETUP.md)** — full guide: install Claude Code, set up API keys, optional Pandoc/tectonic for DOCX/PDF, cross-model verification (`ARS_CROSS_MODEL`), and five installation methods (Plugin, project skills, global skills, claude.ai Project, repo-cloned).
 
-**Using Codex CLI?** Install the sibling distribution instead: [`Imbad0202/academic-research-skills-codex`](https://github.com/Imbad0202/academic-research-skills-codex) — same workflow content, Codex-native packaging as a single `$academic-research-suite` skill with `ars-*` aliases.
+**Using Codex CLI?** Install the sibling distribution instead: [`FairmeHIT/academic-research-skills-codex-zh-CH`](https://github.com/FairmeHIT/academic-research-skills-codex-zh-CH) — same workflow content, Codex-native packaging as a single `$academic-research-suite` skill with `ars-*` aliases.
 
 ## Performance & cost
 

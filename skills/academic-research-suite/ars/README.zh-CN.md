@@ -1,7 +1,7 @@
 # Academic Research Skills for Claude Code
 
 > **Codex package note.** 这份档案是 vendored upstream ARS README，内容仍在说明
-> Claude Code 原生 plugin。在 `academic-research-skills-codex` 里，请安装并使用外层
+> Claude Code 原生 plugin。在 `academic-research-skills-codex-zh-CH` 里，请安装并使用外层
 > Codex skill；见 [`../../../README.md`](../../../README.md)、
 > [`docs/SETUP.zh-CN.md`](docs/SETUP.zh-CN.md) 与
 > [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md)。`/plugin install`、原生
@@ -68,7 +68,7 @@ v3.3 的灵感来自 [**PaperOrchestra**](https://arxiv.org/abs/2604.05018)（So
 
 **👉 [docs/SETUP.zh-CN.md](docs/SETUP.zh-CN.md)** — 完整指南：安装 Claude Code、设定 API key、选用的 Pandoc/tectonic（DOCX/PDF）、跨模型验证（`ARS_CROSS_MODEL`），以及五种安装方式（Plugin、专案 skills、全域 skills、claude.ai Project、repo clone）。
 
-**用 Codex CLI？** 请改装姊妹版：[`Imbad0202/academic-research-skills-codex`](https://github.com/Imbad0202/academic-research-skills-codex)。同一套 workflow 内容，Codex 原生包装为单一 `$academic-research-suite` skill，提供 `ars-*` 别名。
+**用 Codex CLI？** 请改装姊妹版：[`FairmeHIT/academic-research-skills-codex-zh-CH`](https://github.com/FairmeHIT/academic-research-skills-codex-zh-CH)。同一套 workflow 内容，Codex 原生包装为单一 `$academic-research-suite` skill，提供 `ars-*` 别名。
 
 ## 效能与费用
 

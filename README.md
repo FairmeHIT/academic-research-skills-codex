@@ -1,19 +1,25 @@
-# Academic Research Skills for Codex
+# Academic Research Skills for Codex 简体中文适配版
 
 [![Version](https://img.shields.io/badge/version-v0.1.8-blue)](VERSION)
 [![License: CC BY-NC 4.0](https://img.shields.io/badge/license-CC%20BY--NC%204.0-lightgrey)](https://creativecommons.org/licenses/by-nc/4.0/)
+[![Language](https://img.shields.io/badge/language-%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87%E9%80%82%E9%85%8D%E7%89%88-red)](README.md)
 [![Sponsor](https://img.shields.io/badge/sponsor-Buy%20Me%20a%20Coffee-orange?logo=buy-me-a-coffee)](https://buymeacoffee.com/crucify020v)
 
-Codex-native packaging of the Academic Research Skills suite. This is the
-sibling Codex distribution of
-[Academic Research Skills for Claude Code](https://github.com/Imbad0202/academic-research-skills).
+`academic-research-skills-codex-zh-CH` 是
+[Academic Research Skills for Claude Code](https://github.com/Imbad0202/academic-research-skills)
+面向 Codex 用户的简体中文适配版。它把 ARS 的研究工作流封装为一个 Codex skill：
+`$academic-research-suite`。
 
-This fork adds a Simplified Chinese adaptation for Codex users: Chinese output
-defaults to Simplified Chinese, user-facing Chinese documentation is published
-as `zh-CN`, ARS trigger keywords include Simplified Chinese wording, and CJK
-LaTeX guidance uses Simplified Chinese font defaults.
+本适配版默认面向简体中文使用场景：
 
-This repository vendors the ARS workflow content as a single Codex skill:
+- 中文输出默认使用简体中文。
+- 面向用户的中文文档发布为 `zh-CN`。
+- ARS 触发词和路由提示包含简体中文表述。
+- CJK LaTeX 指南使用简体中文字体默认配置。
+
+## 项目结构
+
+本仓库将 ARS 工作流内容 vendored 到一个 Codex skill 中：
 
 ```text
 skills/academic-research-suite/
@@ -33,124 +39,131 @@ skills/academic-research-suite/
     shared/
 ```
 
-The original Claude Code ARS checkout is not modified. Upstream content is copied
-from fresh GitHub clones and adapted through the Codex router in
-`skills/academic-research-suite/SKILL.md`.
+原始 Claude Code ARS 仓库不会被直接修改。上游内容来自 GitHub fresh clone，
+并通过 `skills/academic-research-suite/SKILL.md` 中的 Codex router 进行适配。
 
-## Claude Code Version
+## 与 Claude Code 版本的关系
 
-This repository is the Codex package. For the original Claude Code version of
-Academic Research Skills, use
-[Imbad0202/academic-research-skills](https://github.com/Imbad0202/academic-research-skills).
+本仓库是 Codex 发行版。原始 Claude Code 版本请使用：
+[Imbad0202/academic-research-skills](https://github.com/Imbad0202/academic-research-skills)。
 
-Use the Claude Code repo when you want the native Claude Code skill layout,
-Claude-specific agent-team behavior, or the original ARS development history.
-Use this repo when you want the Codex-native single-suite skill.
+如果你需要 Claude Code 原生 skill 布局、Claude 专用 agent-team 行为，或完整的
+ARS 上游开发历史，请使用原始仓库。如果你需要 Codex 原生的单 skill 入口，请使用本仓库。
 
-## Versioning
+## 版本说明
 
-This Codex package is version `0.1.8`. The repo-root `VERSION` file,
-`skills/academic-research-suite/SKILL.md` metadata version, and
-`skills/academic-research-suite/manifest.json` `adapter_version` track the
-Codex package version independently of the vendored ARS suite. Vendored upstream
-versions are recorded by commit in `manifest.source_repositories[]`.
+当前 Codex package 版本为 `0.1.8`。以下位置共同记录 Codex package 版本：
 
-Package-level changes are summarized in [`CHANGELOG.md`](CHANGELOG.md).
+- 根目录 `VERSION`
+- `skills/academic-research-suite/SKILL.md` metadata version
+- `skills/academic-research-suite/manifest.json` 中的 `adapter_version`
 
-The vendored ARS source currently tracks
+Codex package 版本独立于 vendored ARS suite 版本。上游 vendored 版本通过
+`manifest.source_repositories[]` 中的 commit 记录。
+
+包级别变更记录见 [`CHANGELOG.md`](CHANGELOG.md)。
+
+当前 vendored ARS source 跟踪：
 `Imbad0202/academic-research-skills@96b82e82142dc95f117595c207d3e150b078e411`
-(`v3.9.4.2`). The v3.9.4.2 upstream delta is CI/release-gate-only under
-`.github/`, which this Codex package intentionally excludes; vendored runtime
-content includes ARS v3.9.4.1 temporal-verification hotfixes and the v3.9.1
-through v3.9.4 workflow updates.
+（`v3.9.4.2`）。上游 v3.9.4.2 的增量主要是 `.github/` 下的 CI/release gate
+内容，本 Codex package 有意排除这些文件；运行时内容包含 ARS v3.9.4.1 的
+temporal-verification hotfix，以及 v3.9.1 到 v3.9.4 的工作流更新。
 
-## Install Or Update
+## 安装与更新
 
-Install the skill from this repo path. Use `--method git` so public and
-credentialed GitHub access both work consistently:
+从本仓库路径安装 skill。建议使用 `--method git`，这样公开 GitHub 访问和带凭据访问
+都更稳定。
 
 ```bash
 python "$HOME/.codex/skills/.system/skill-installer/scripts/install-skill-from-github.py" \
-  --repo FairmeHIT/academic-research-skills-codex \
+  --repo FairmeHIT/academic-research-skills-codex-zh-CH \
   --ref main \
   --path skills/academic-research-suite \
   --method git
 ```
 
-To update an existing install:
+更新已有安装：
 
 ```bash
 rm -rf "$HOME/.codex/skills/academic-research-suite"
 python "$HOME/.codex/skills/.system/skill-installer/scripts/install-skill-from-github.py" \
-  --repo FairmeHIT/academic-research-skills-codex \
+  --repo FairmeHIT/academic-research-skills-codex-zh-CH \
   --ref main \
   --path skills/academic-research-suite \
   --method git
 ```
 
-Open a new Codex conversation after installation. Existing Codex sessions may
-keep their old skill cache; you do not need to close unrelated Claude or Codex
-sessions.
+安装或更新后，请开启一个新的 Codex conversation。已有 Codex session 可能仍缓存旧版
+skill；不需要关闭无关的 Claude 或 Codex session。
 
-Verify with `/skills`: you should see one ARS entry, `academic-research-suite`
-or `Academic Research ...`. You should **not** see separate `academic-paper`,
-`academic-pipeline`, `deep-research`, or `academic-paper-reviewer` skills from
-this package. If you do, reinstall with the update command above and open a new
-Codex conversation.
+使用 `/skills` 验证安装结果：你应该只看到一个 ARS entry，即
+`academic-research-suite` 或 `Academic Research ...`。不应看到本 package 分出的
+`academic-paper`、`academic-pipeline`、`deep-research` 或
+`academic-paper-reviewer` 等独立 skill。如果出现这些条目，请按上面的更新命令重新安装，
+并开启新的 Codex conversation。
 
-## Codex Docs
+## 文档
 
-- [Codex setup](skills/academic-research-suite/ars/docs/SETUP.md) covers
-  installation, `ars-*` aliases, optional tools, Material Passport adapters,
-  and unsupported Claude plugin features.
+- [Codex 安装与设置](skills/academic-research-suite/ars/docs/SETUP.zh-CN.md)
+  说明安装、`ars-*` 别名、可选工具、Material Passport adapters，以及不支持的
+  Claude plugin 功能。
 - [Codex architecture](skills/academic-research-suite/ars/docs/ARCHITECTURE.md)
-  explains the logical ARS pipeline with the Codex runtime overlay.
+  说明 ARS pipeline 的逻辑结构和 Codex runtime overlay。
 
-## Usage
+## 使用方式
 
-Invoke the suite explicitly with `$academic-research-suite` (singular), then
-describe the research task and provide any source files, notes, draft text,
-reviewer comments, or output constraints.
+显式调用 `$academic-research-suite`，然后描述研究任务，并提供源文件、笔记、草稿、
+审稿意见或输出约束。
 
 ```text
 Use $academic-research-suite to help me plan a systematic literature review on
 AI adoption in higher education quality assurance.
 ```
 
-The Codex adapter routes the request to one of five ARS workflows:
+也可以直接用中文描述任务：
 
-| Workflow | Use when you need | Example prompt |
+```text
+Use $academic-research-suite。
+
+我想写一篇关于高校质量保障中 AI 采用的系统综述。
+目前还没有清晰的研究问题，请先通过苏格拉底式提问帮我收敛选题，
+不要直接写论文大纲。
+```
+
+Codex adapter 会将请求路由到五类 ARS 工作流：
+
+| 工作流 | 适用场景 | 示例 prompt |
 |---|---|---|
-| `deep-research` | Research question refinement, literature review, systematic review, meta-analysis, fact-checking | `Use $academic-research-suite to build a systematic review protocol for AI in higher education QA.` |
-| `academic-paper` | Paper outline, drafting, abstract, revision, citation formatting, AI disclosure | `Use $academic-research-suite to turn these notes into an IMRaD paper outline and drafting plan.` |
-| `academic-paper-reviewer` | Manuscript review, simulated peer review, editorial decision, re-review | `Use $academic-research-suite to review this manuscript and produce a journal-style decision letter.` |
-| `academic-pipeline` | End-to-end research-to-paper workflow with integrity gates, review, revision, and final checks | `Use $academic-research-suite to run an end-to-end research-to-paper pipeline from topic to revised manuscript.` |
-| `experiment-agent` | Code experiment planning, human study protocol, statistical interpretation, reproducibility validation | `Use $academic-research-suite to plan a code experiment and define reproducibility checks.` |
+| `deep-research` | 研究问题收敛、文献综述、系统综述、meta-analysis、事实核查 | `Use $academic-research-suite to build a systematic review protocol for AI in higher education QA.` |
+| `academic-paper` | 论文大纲、写作、摘要、修订、引用格式、AI disclosure | `Use $academic-research-suite to turn these notes into an IMRaD paper outline and drafting plan.` |
+| `academic-paper-reviewer` | 稿件评审、模拟 peer review、编辑决定、复审 | `Use $academic-research-suite to review this manuscript and produce a journal-style decision letter.` |
+| `academic-pipeline` | 从研究到论文的端到端流程，包含完整性检查、评审、修订和最终检查 | `Use $academic-research-suite to run an end-to-end research-to-paper pipeline from topic to revised manuscript.` |
+| `experiment-agent` | 代码实验规划、人类研究方案、统计解释、可复现性验证 | `Use $academic-research-suite to plan a code experiment and define reproducibility checks.` |
 
-### Claude-Style Aliases
+## Claude 风格别名
 
-Claude Code v3.7 installs `/ars-*` slash commands. Codex does not have the same
-plugin command registry, so this package emulates the command intent inside the
-single `$academic-research-suite` skill. Use either form:
+Claude Code v3.7 会安装 `/ars-*` slash commands。Codex 没有同样的 plugin command
+registry，因此本 package 在单一 `$academic-research-suite` skill 中模拟这些命令意图。
+
+推荐写法：
 
 ```text
 Use $academic-research-suite: ars-plan my paper on AI governance in universities.
 ```
 
-or, when your Codex client passes slash-prefixed text through as a normal user
-message:
+如果你的 Codex client 会把 slash-prefixed 文本作为普通用户消息传入，也可以写：
 
 ```text
 /ars-plan my paper on AI governance in universities.
 ```
 
-If slash input is intercepted by the client, use the plain alias form:
+如果 slash input 被 client 拦截，请使用普通 alias：
 
 ```text
 ars-plan my paper on AI governance in universities.
 ```
 
-| Claude command | Codex alias | Routed workflow |
+| Claude command | Codex alias | 路由工作流 |
 |---|---|---|
 | `/ars-plan` | `ars-plan` | `academic-paper` `plan` mode |
 | `/ars-outline` | `ars-outline` | `academic-paper` `outline-only` mode |
@@ -163,38 +176,33 @@ ars-plan my paper on AI governance in universities.
 | `/ars-revision` | `ars-revision` | `academic-paper` `revision` mode |
 | `/ars-full` | `ars-full` | `academic-pipeline` full workflow |
 
-### Working Pattern
+## 推荐工作方式
 
-For best results, start with the workflow goal and the current state of your
-materials:
-
-```text
-Use $academic-research-suite.
-
-Goal: write a journal article.
-Current materials: I have a literature matrix and rough findings, but no outline.
-Output needed now: paper architecture and missing-evidence checklist.
-Constraints: English, APA 7, higher education policy audience.
-```
-
-If you only have a paper topic or broad research direction and do not yet have a
-clear research question, the Codex router should start with ARS Socratic
-scoping:
+为了得到更稳定的输出，请在开头说明工作流目标、材料状态和输出约束：
 
 ```text
-Use $academic-research-suite.
+Use $academic-research-suite。
 
-I want to write a paper on AI adoption in higher education quality assurance.
-I do not yet have a clear research question.
-Please use SCR / Socratic dialogue to help me narrow the question first; do not write an outline yet.
+目标：写一篇期刊论文。
+当前材料：已有文献矩阵和粗略发现，但还没有大纲。
+当前需要：论文结构和缺失证据清单。
+约束：英文写作，APA 7，面向高等教育政策读者。
 ```
 
-Expected route: `deep-research` `socratic` mode first. ARS should ask narrowing
-questions and should not produce an outline or draft until the research question
-has converged.
+如果只有宽泛主题、还没有清晰研究问题，请先要求 ARS 进行 Socratic scoping：
 
-For review tasks, provide the manuscript or a path to the manuscript, plus the
-review mode you want:
+```text
+Use $academic-research-suite。
+
+我想写一篇关于高校质量保障中 AI 采用的论文。
+我还没有清晰的研究问题。
+请使用 SCR / Socratic dialogue 帮我先收敛问题；暂时不要写大纲。
+```
+
+预期路由：先进入 `deep-research` 的 `socratic` mode。ARS 应先提出收敛问题，
+不应在研究问题收敛前直接输出大纲或草稿。
+
+评审任务请提供稿件或稿件路径，并说明需要的评审模式：
 
 ```text
 Use $academic-research-suite to review this paper.
@@ -203,25 +211,24 @@ Focus: methodology, contribution, citation integrity, and likely desk-reject ris
 Output: reviewer reports plus editorial decision letter.
 ```
 
-For staged pipelines, ask for a checkpoint instead of asking Codex to run the
-entire process silently:
+长流程任务建议要求 checkpoint，而不是让 Codex 静默运行完整 pipeline：
 
 ```text
 Use $academic-research-suite to start an academic-pipeline run.
 Begin with Stage 0 intake and stop after producing the pipeline dashboard.
 ```
 
-### Smoke Tests
+## Smoke Tests
 
-In a new Codex conversation:
+在新的 Codex conversation 中运行：
 
 ```text
 /skills
 ```
 
-Expected: one ARS entry only.
+预期结果：只出现一个 ARS entry。
 
-Then test Socratic routing:
+测试 Socratic routing：
 
 ```text
 Use $academic-research-suite.
@@ -229,137 +236,124 @@ I want to write a paper on AI adoption in higher education quality assurance.
 I do not yet have a clear research question.
 ```
 
-Expected: route to `deep-research` `socratic` mode and ask narrowing questions.
+预期结果：路由到 `deep-research` 的 `socratic` mode，并提出收敛问题。
 
-CLI smoke test:
+CLI smoke test：
 
 ```bash
 codex exec --ephemeral --sandbox read-only \
-  -C /path/to/academic-research-skills-codex \
+  -C /path/to/academic-research-skills-codex-zh-CH \
   'Use $academic-research-suite. Router smoke test only. User request to classify: I want to write a paper on AI adoption in higher education quality assurance, but I do not yet have a clear research question. According to the academic-research-suite router, classify the workflow and mode.'
 ```
 
-### Non-Blocking Codex Warnings
+## Codex 常见非阻塞警告
 
-These Codex messages do not mean ARS failed to install:
+以下 Codex 消息不表示 ARS 安装失败：
 
-- `[features].codex_hooks is deprecated` — update your Codex config when
-  convenient; ARS Codex does not require hooks for normal use.
-- `hooks need review before they can run` — review those hooks separately if
-  you use them. ARS Codex treats vendored Claude hooks as traceability metadata
-  and does not require them.
+- `[features].codex_hooks is deprecated`：可在方便时更新 Codex config；ARS Codex
+  正常使用不依赖 hooks。
+- `hooks need review before they can run`：如果你需要使用这些 hooks，可单独 review。
+  ARS Codex 将 vendored Claude hooks 视为 traceability metadata，不要求它们运行。
 
-### Codex Adapter Behavior
+## Codex Adapter 行为
 
-ARS was originally written for Claude Code. In this Codex package:
+ARS 最初为 Claude Code 编写。在本 Codex package 中：
 
-- The vendored `agents/*.md` files are used as role and phase prompts.
-- The vendored `commands/ars-*.md` files are prompt recipes only. Codex does not
-  register them as slash commands.
-- The vendored `hooks/hooks.json` file is preserved for upstream traceability
-  only. Codex does not install Claude Code hooks from this package.
-- Codex does not automatically spawn background agents unless you explicitly ask
-  for delegated or parallel agent work.
-- Web/source verification uses Codex browsing and must cite sources when current
-  or external facts matter.
-- Cross-model verification is disabled by default. When explicitly requested in
-  this Codex package, configure `ARS_CROSS_MODEL=claude-opus-4.7` and
-  `ANTHROPIC_API_KEY`; the external reviewer uses Anthropic Claude Opus 4.7 API,
-  not Codex/OpenAI API. Upstream GPT/Gemini secondary-dispatch instructions are
-  ignored unless this explicit Anthropic configuration is present.
-- Upstream references to a "fresh Claude Code session" mean a new Codex
-  conversation in this package; Material Passport reset semantics still apply.
-- If a citation, source, statistic, or journal policy cannot be verified, Codex
-  should mark it as unverified rather than invent support.
+- vendored `agents/*.md` 文件作为角色和阶段 prompt 使用。
+- vendored `commands/ars-*.md` 文件只作为 prompt recipes；Codex 不会注册它们为
+  slash commands。
+- vendored `hooks/hooks.json` 仅用于上游可追溯性；Codex 不会从本 package 安装或执行
+  Claude Code hooks。
+- Codex 不会自动生成后台 agents，除非你明确要求 delegated 或 parallel agent work。
+- 当涉及当前事实或外部事实时，web/source verification 使用 Codex browsing，并需要引用来源。
+- Cross-model verification 默认关闭。若在本 Codex package 中明确请求该功能，需要配置
+  `ARS_CROSS_MODEL=claude-opus-4.7` 和 `ANTHROPIC_API_KEY`；外部 reviewer 使用
+  Anthropic Claude Opus 4.7 API，而不是 Codex/OpenAI API。
+- 上游文档中的 “fresh Claude Code session” 在本 package 中表示新的 Codex conversation；
+  Material Passport reset semantics 仍然适用。
+- 对无法验证的引用、来源、统计数据或期刊政策，Codex 应标记为 unverified，而不是编造依据。
 
-### ARS v3.9.4.2 Parity
+## ARS v3.9.4.2 对齐情况
 
-This package aims for the same user-facing workflow content as upstream ARS
-v3.9.4.2 where Codex has an equivalent concept.
+本 package 尽量在 Codex 有对应概念的地方保持与上游 ARS v3.9.4.2 相同的用户可见工作流内容。
 
-| Upstream ARS feature | Codex package behavior |
+| 上游 ARS 功能 | Codex package 行为 |
 |---|---|
-| One installable plugin | One installable Codex skill at `skills/academic-research-suite` |
-| `/ars-*` slash commands | Emulated as `ars-*` aliases through the skill router; not native slash commands |
-| Four upstream skills auto-discovered from `skills/` symlinks | Single Codex router skill selects the workflow and reads the vendored workflow `WORKFLOW.md` files |
-| Plugin-shipped agents | Agent files are role/phase prompts; Codex runs them inline unless the user explicitly asks for delegated subagents |
-| `model: opus` / `model: sonnet` command routing | Treated as Claude metadata; Codex uses the active model |
-| SessionStart and SubagentStop hooks | Vendored for traceability only; Codex does not install or execute Claude hooks |
-| Plugin marketplace update / auto-update | Not available here; update by reinstalling or pulling this Codex repo |
-| Claude Code Agent Team | Not automatic; Codex subagents require an explicit user request for delegation or parallel agents |
-| Cross-model GPT/Gemini dispatch from upstream docs | Disabled; Codex package only supports optional Anthropic Claude Opus 4.7 review when explicitly configured |
+| 一个可安装 plugin | 一个可安装 Codex skill：`skills/academic-research-suite` |
+| `/ars-*` slash commands | 通过 skill router 模拟为 `ars-*` aliases；不是原生 slash commands |
+| 四个上游 skills 由 `skills/` symlinks 自动发现 | 单一 Codex router skill 选择 workflow，并读取 vendored workflow `WORKFLOW.md` |
+| Plugin-shipped agents | agent 文件作为 role/phase prompts；除非用户明确要求 subagents，否则 Codex inline 执行 |
+| `model: opus` / `model: sonnet` command routing | 视为 Claude metadata；Codex 使用当前 active model |
+| SessionStart 和 SubagentStop hooks | 仅为 traceability vendored；Codex 不安装或执行 Claude hooks |
+| Plugin marketplace update / auto-update | 不适用于本仓库；通过 reinstall 或 pull 本 Codex repo 更新 |
+| Claude Code Agent Team | 不自动启用；Codex subagents 需要用户明确要求 delegation 或 parallel agents |
+| 上游 GPT/Gemini cross-model dispatch | 默认关闭；仅支持显式配置后的 Anthropic Claude Opus 4.7 reviewer |
 
-### Optional Claude Opus 4.7 Reviewer API
+## 可选 Claude Opus 4.7 Reviewer API
 
-For reviewer calibration or cross-model devil's advocate checks:
+如需 reviewer calibration 或 cross-model devil's advocate checks：
 
 ```bash
 export ANTHROPIC_API_KEY="<your-anthropic-api-key>"
 export ARS_CROSS_MODEL="claude-opus-4.7"
 ```
 
-Then ask for cross-model verification explicitly in the prompt. Without both
-environment variables, ARS Codex falls back to single-runtime review and should
-report that the Claude Opus 4.7 verifier was unavailable.
+然后在 prompt 中明确请求 cross-model verification。若缺少任一环境变量，ARS Codex
+会回退到单 runtime review，并应报告 Claude Opus 4.7 verifier 不可用。
 
-## Support And Sponsorship
+## 支持与赞助
 
-If ARS Codex helps your research workflow, you can support maintenance through
-[Buy Me a Coffee](https://buymeacoffee.com/crucify020v).
+如果 ARS Codex 对你的研究工作流有帮助，可以通过
+[Buy Me a Coffee](https://buymeacoffee.com/crucify020v) 支持维护。
 
-## Security
+## 安全
 
-Do not open public issues for vulnerabilities. Follow
-[`SECURITY.md`](SECURITY.md) for private reporting, and see the
-[release readiness and security report](security_best_practices_report.md) for
-the latest local validation summary.
+请不要在公开 issue 中披露漏洞。私密报告方式见 [`SECURITY.md`](SECURITY.md)，
+本地验证摘要见 [release readiness and security report](security_best_practices_report.md)。
 
-### File Layout For Advanced Use
+## 高级使用的文件布局
 
-The entry point is:
+入口文件：
 
 ```text
 skills/academic-research-suite/SKILL.md
 ```
 
-Workflow content is under:
+工作流内容：
 
 ```text
 skills/academic-research-suite/ars/<workflow>/
 ```
 
-Shared schemas, compliance rules, and cross-workflow contracts are under:
+共享 schema、compliance rules 和 cross-workflow contracts：
 
 ```text
 skills/academic-research-suite/ars/shared/
 ```
 
-When debugging or updating the package, preserve these paths. Many ARS workflow
-files cross-reference `shared/`, `scripts/`, `examples/`, and other workflow
-directories.
+调试或更新 package 时请保留这些路径。许多 ARS workflow 文件会交叉引用 `shared/`、
+`scripts/`、`examples/` 和其他 workflow 目录。
 
-## Update Policy
+## 更新策略
 
-Updates sync selected upstream ARS content into `skills/academic-research-suite/ars/`.
-Do not mirror the Claude Code repo blindly; exclude Claude/plugin loader files
-such as `.claude/`, `.claude-plugin/`, `.github/`, source `.gitignore`, and
-symlink-only alias directories that are not needed in Codex.
+更新时，将选定的上游 ARS 内容同步到 `skills/academic-research-suite/ars/`。
+不要盲目镜像 Claude Code 仓库；应排除 Claude/plugin loader 文件，例如 `.claude/`、
+`.claude-plugin/`、`.github/`、源仓库 `.gitignore`，以及 Codex 不需要的 symlink-only
+alias directories。
 
-### Inactive Upstream Scripts
+### 未启用的上游脚本
 
-Some upstream maintenance scripts are vendored but intentionally inactive in
-this Codex package because they require non-vendored Claude Code inputs such as
-`.claude/CLAUDE.md`. See `inactive_upstream_scripts` in
-`skills/academic-research-suite/manifest.json` before wiring any upstream script
-into Codex CI.
+部分上游维护脚本已 vendored，但在本 Codex package 中有意保持 inactive，因为它们依赖
+非 vendored 的 Claude Code 输入，例如 `.claude/CLAUDE.md`。将任何上游脚本接入 Codex CI
+之前，请先查看 `skills/academic-research-suite/manifest.json` 中的
+`inactive_upstream_scripts`。
 
-## Contributors And Acknowledgements
+## 贡献者与致谢
 
-**Cheng-I Wu** - Maintainer of the ARS suite and this Codex sibling
-distribution.
+**Cheng-I Wu** - ARS suite 和本 Codex sibling distribution 的维护者。
 
-**Codex** - Assisted with the Codex adapter packaging, router-policy hardening,
-test fixes, and release-readiness review under maintainer direction.
+**Codex** - 在维护者指导下协助完成 Codex adapter packaging、router-policy hardening、
+test fixes 和 release-readiness review。
 
-Vendored upstream ARS contributors are acknowledged in
-[`skills/academic-research-suite/ars/README.md`](skills/academic-research-suite/ars/README.md#contributors).
+Vendored upstream ARS contributors 见
+[`skills/academic-research-suite/ars/README.md`](skills/academic-research-suite/ars/README.md#contributors)。

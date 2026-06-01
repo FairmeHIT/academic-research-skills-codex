@@ -2,7 +2,7 @@
 
 Date: 2026-05-10
 
-Scope: `skills/academic-research-suite` in `academic-research-skills-codex`.
+Scope: `skills/academic-research-suite` in `academic-research-skills-codex-zh-CH`.
 The upstream `academic-research-skills` checkout was not modified.
 
 ## Summary

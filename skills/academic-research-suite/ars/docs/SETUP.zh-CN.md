@@ -1,6 +1,6 @@
 # ARS Codex 安装设定
 
-本文说明 `academic-research-skills-codex` 的 Codex 版设定方式，不是
+本文说明 `academic-research-skills-codex-zh-CH` 的 Codex 版设定方式，不是
 Claude Code plugin 安装指南。Claude Code 原生版本请使用
 `Imbad0202/academic-research-skills`。
 
@@ -11,7 +11,7 @@ Claude Code plugin 安装指南。Claude Code 原生版本请使用
 
 ```bash
 python "$HOME/.codex/skills/.system/skill-installer/scripts/install-skill-from-github.py" \
-  --repo Imbad0202/academic-research-skills-codex \
+  --repo FairmeHIT/academic-research-skills-codex-zh-CH \
   --ref main \
   --path skills/academic-research-suite \
   --method git
@@ -22,7 +22,7 @@ python "$HOME/.codex/skills/.system/skill-installer/scripts/install-skill-from-g
 ```bash
 rm -rf "$HOME/.codex/skills/academic-research-suite"
 python "$HOME/.codex/skills/.system/skill-installer/scripts/install-skill-from-github.py" \
-  --repo Imbad0202/academic-research-skills-codex \
+  --repo FairmeHIT/academic-research-skills-codex-zh-CH \
   --ref main \
   --path skills/academic-research-suite \
   --method git
@@ -137,7 +137,7 @@ Codex CLI：
 
 ```bash
 codex exec --ephemeral --sandbox read-only \
-  -C /path/to/academic-research-skills-codex \
+  -C /path/to/academic-research-skills-codex-zh-CH \
   'Use $academic-research-suite. Router smoke test only. User request to classify: 我想做一篇论文，题目方向是 AI adoption in higher education quality assurance，但我还没有明确 research question。 According to the academic-research-suite router, classify the workflow and mode.'
 ```
 

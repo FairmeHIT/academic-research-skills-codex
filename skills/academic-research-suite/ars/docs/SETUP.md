@@ -1,7 +1,7 @@
 # ARS Codex Setup
 
 This document describes the Codex package
-`academic-research-skills-codex`. It is not the Claude Code plugin setup guide.
+`academic-research-skills-codex-zh-CH`. It is not the Claude Code plugin setup guide.
 For the native Claude Code version, use
 `Imbad0202/academic-research-skills`.
 
@@ -12,7 +12,7 @@ GitHub access both behave consistently:
 
 ```bash
 python "$HOME/.codex/skills/.system/skill-installer/scripts/install-skill-from-github.py" \
-  --repo Imbad0202/academic-research-skills-codex \
+  --repo FairmeHIT/academic-research-skills-codex-zh-CH \
   --ref main \
   --path skills/academic-research-suite \
   --method git
@@ -23,7 +23,7 @@ To update an existing install:
 ```bash
 rm -rf "$HOME/.codex/skills/academic-research-suite"
 python "$HOME/.codex/skills/.system/skill-installer/scripts/install-skill-from-github.py" \
-  --repo Imbad0202/academic-research-skills-codex \
+  --repo FairmeHIT/academic-research-skills-codex-zh-CH \
   --ref main \
   --path skills/academic-research-suite \
   --method git
@@ -144,7 +144,7 @@ Codex CLI:
 
 ```bash
 codex exec --ephemeral --sandbox read-only \
-  -C /path/to/academic-research-skills-codex \
+  -C /path/to/academic-research-skills-codex-zh-CH \
   'Use $academic-research-suite. Router smoke test only. User request to classify: I want to write a paper on AI adoption in higher education quality assurance, but I do not yet have a clear research question. According to the academic-research-suite router, classify the workflow and mode.'
 ```
 
